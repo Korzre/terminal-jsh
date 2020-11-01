@@ -24,10 +24,6 @@ public class ComandoPrompt {
 		if(strArray.length > 1) {
 			argumentos.add(strArray[1]);
 		}
-			
-//			@Teste
-//			System.out.println("Comando: " +getNome()); 
-//			System.out.println("Argumentos: " +getArgumentos().get(0));
 						
 	}
     
