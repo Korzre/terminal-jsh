@@ -27,11 +27,7 @@ public class ComandoPrompt {
 						
 	}
     
-    /**
-     * Método acessor get para o nome do comando.
-     * 
-     * @return o nome do comando, exatamente como foi entrado.
-     */
+    //Projeto concluído
     public String getNome() { 
         return nome;
     }
