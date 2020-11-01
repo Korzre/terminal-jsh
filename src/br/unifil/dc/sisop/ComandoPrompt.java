@@ -1,6 +1,8 @@
 package br.unifil.dc.sisop;
 
 import java.util.List;
+import java.util.Scanner;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -12,10 +14,22 @@ import java.util.Collections;
  */
 public class ComandoPrompt {
     
-    public ComandoPrompt(String comando) {
-        // ESCREVA AQUI SEU CODIGO PARA ESTRUTURAR O COMANDO RECEBIDO DO PROMPT.
-        throw new RuntimeException("Método ainda não implementado");
-    }
+	private String nome;
+    private ArrayList<String> argumentos = new ArrayList<String>();
+    
+	public ComandoPrompt(String comando) {
+		String strArray[] = comando.split(" ");
+		
+		nome = strArray[0];
+		if(strArray.length > 1) {
+			argumentos.add(strArray[1]);
+		}
+			
+//			@Teste
+//			System.out.println("Comando: " +getNome()); 
+//			System.out.println("Argumentos: " +getArgumentos().get(0));
+						
+	}
     
     /**
      * Método acessor get para o nome do comando.
@@ -23,7 +37,6 @@ public class ComandoPrompt {
      * @return o nome do comando, exatamente como foi entrado.
      */
     public String getNome() { 
-
         return nome;
     }
     
@@ -32,11 +45,7 @@ public class ComandoPrompt {
      * 
      * @return Lista de argumentos do comando, protegida contra modificações externas.
      */
-    public List<String> getArgumentos() {
-
-        return Collections.unmodifiableList(Arrays.asList(argumentos));
-    }
-    
-    private final String nome;
-    private final String[] argumentos;
+    public ArrayList<String> getArgumentos() {
+		return argumentos;
+    }  
 }
